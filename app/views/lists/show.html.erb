@@ -6,6 +6,14 @@
 </p>
 
 <ul>
+  <% @movies.each do |movie| %>
+      <h1><%= movie.title %></h1>
+      <%= movie.overview %>
+    </li>
+  <% end %>
+</ul>
+
+<ul>
   <% @bookmarks.each do |bookmark| %>
     <li>
       <%= bookmark.comment %> |
