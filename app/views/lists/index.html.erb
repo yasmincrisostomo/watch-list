@@ -15,10 +15,12 @@
       <tr>
         <td><%= link_to list.name, list_path(list) %></td>
       </tr>
+      <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
     <% end %>
   </tbody>
 </table>
 
 <br>
+
 
 <%= link_to 'New list', new_list_path %>
