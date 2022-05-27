@@ -12,6 +12,12 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <%= link_to 'Watch List', lists_path, class: "navbar-brand" %>
+        <%= link_to 'Add list', new_list_path, class: "btn btn-outline-primary my-2 my-sm-0 ms-2" %>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
