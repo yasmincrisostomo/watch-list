@@ -1,18 +1,8 @@
-<h1>New List</h1>
-
-<%= simple_form_for(@list) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
+<div class="container px-5 w-50">
+  <h2 class="ml-5 my-5">Create a new list</h2>
+  <%= simple_form_for @list do |f| %>
     <%= f.input :name %>
     <%= f.input :photo, as: :file %>
-  </div>
-
-  <div class="form-actions d-grid">
-    <%= f.button :submit, nil, class: 'btn btn-primary' %>
-  </div>
-<% end %>
-
-
-<%= link_to 'Back', lists_path %>
+    <%= f.button :submit, class: 'btn btn-flat' %>
+  <% end %>
+</div>

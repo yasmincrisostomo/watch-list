@@ -11,10 +11,3 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
-body{
-  min-height: 100vh;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
