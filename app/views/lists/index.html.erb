@@ -7,17 +7,14 @@
 <div class="container mt-4 text-end">
   <%= link_to "Create a movie list", new_list_path, class: "btn btn-flat" %>
 </div>
+
 <div class="container mt-3 px-5">
   <h2>My lists</h2>
   <div class="cards mb-5">
-    <% if @lists.length > 0 %>
-      <% @lists.each do |list| %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path list.photo.key %>)">
-            <%= link_to list.name, list_path(list) %>
-          </div>
-      <% end %>
-    <% else %>
-      <p>No lists created yet.</p>
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_tag list.photo.key %>)">
+        <%= link_to list.name, list_path(list) %>
+      </div>
     <% end %>
   </div>
 </div>
