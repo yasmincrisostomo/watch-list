@@ -5,7 +5,7 @@
   </div>
 </div>
 
-<div class="container mt-4 text-start">
+<div class="container mt-4 text-center mb-4">
   <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-flat" %>
   <%= link_to "Delete the list", list_path(@list.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-flat" %>
   <%= link_to "Back to lists", lists_path, class: 'btn btn-flat' %>
