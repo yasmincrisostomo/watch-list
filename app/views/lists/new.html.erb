@@ -1,9 +1,9 @@
 <div class="container py-5 my-4">
   <div class="row justify-content-center">
-    <div class="rounded justify-content-center d-flex">
-      <div class="row bg-white p-5 shadow new_list">
-        <div class="col-7">
-          <h2 class="text-center fw-bold my-5">Create a new movie list</h2>
+    <div class="d-flex justify-content-center">
+      <div class="row p-5 shadow new_list">
+        <div class="col-7 text-center">
+          <h2 class="text-center my-5">New movie list</h2>
           <%= simple_form_for @list do |f| %>
             <div class="form-inputs">
               <%= f.input :name, placeholder: "List name", label: false %>
